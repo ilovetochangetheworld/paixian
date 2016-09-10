@@ -1,0 +1,32 @@
+<div class="common-footer">
+    <ul class="common-footer-wrapper">
+        <li class="common-footer-wrapper-li">
+            <a ng-class="{'footer-selected':1 == vm.footerActive}" href="/app/#/index">
+                <i class="iconfont" ng-hide="1 == vm.footerActive">&#xe603;</i>
+                <i class="iconfont" ng-show="1 == vm.footerActive">&#xe603;</i>
+                <p>首页</p>
+            </a>
+        </li>
+        <li class="common-footer-wrapper-li">
+            <a ng-class="{'footer-selected':2 == vm.footerActive}" href="/app/#/classify/0">
+            	<i class="iconfont" ng-hide="2 == vm.footerActive">&#xe601;</i>
+                <i class="iconfont" ng-show="2 == vm.footerActive">&#xe601;</i>
+                <p>订单</p>
+            </a>
+        </li>
+        <li class="common-footer-wrapper-li">
+            <a ng-class="{'footer-selected':3 == vm.footerActive}" href="/app/#/shoppingCart">
+            	<i class="iconfont" ng-hide="3 == vm.footerActive">&#xe602;</i>
+                <i class="iconfont" ng-show="3 == vm.footerActive">&#xe602;</i>
+                <p>购物车</p>
+            </a>
+        </li>
+        <li class="common-footer-wrapper-li" ng-show="true" ui-sref="usercenter"> <!-- 如果是用户 -->
+        	<a ng-class="{'footer-selected':4 == vm.footerActive}" >
+            	<i class="iconfont" ng-hide="4 == vm.footerActive">&#xe604;</i>
+                <i class="iconfont" ng-show="4 == vm.footerActive">&#xe604;</i>
+        		<p>我的</p>
+        	</a>
+        </li>
+    </ul>
+</div>

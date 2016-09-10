@@ -1,0 +1,194 @@
+//px计算
+@function px2rem($px) {
+    $rem: 75px;
+    @return ($px/$rem) + rem;
+}
+
+//flexbox布局
+@mixin flex($orient, $pack, $align) {
+    display: -webkit-box;
+    -webkit-box-orient: $orient;
+    -webkit-box-pack: $pack;
+    -webkit-box-align: $align;
+}
+
+//初始化
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td,
+section,
+p,
+span,
+font,
+div {
+    margin: 0;
+    padding: 0
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a img {
+    border: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// input,textarea,a,button {outline:none;}
+// input::-moz-focus-inner {border:0;}
+body {
+    background: #fff;
+}
+
+// input,textarea,button {border:1px solid #999;background:#fff;}
+//去除浮动
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+.index-wrap {
+    .index-header{
+      height:px2rem(80px);
+      line-height:px2rem(80px);
+      background-color: #FF2D4B;
+      font-size: px2rem(36px);
+      color: #fff;
+      text-align: center;
+    }
+    .index-center{
+      @include flex(horizontal,justify,start)
+      .index-menu{
+        width:px2rem(150px);
+        height:700px;
+        .index-menu-list{
+          font-size: px2rem(28px);
+          height:px2rem(100px);
+          line-height:px2rem(100px);
+          text-align:center;
+          color:#666666;
+        }
+        .active{
+          background-color: #fff !important;
+          color: #FF2D4B;
+          border-left:1px solid #FF2D4B;
+        }
+      }
+      .index-goodsList{
+        width:px2rem(600px);
+        height:700px;
+        background-color:#fff;
+        .index-goodsList-item{
+          height:px2rem(200px);
+          @include flex(horizontal,start,start);
+          .goodsImg{
+            width:px2rem(250px);
+            height:px2rem(200px);
+            img{
+              height:100%;
+              width:100%;
+            }
+          }
+          .goodsContent{
+            position: relative;
+            @include flex(vertical,start,start);
+            .title{
+              font-size: px2rem(28px);
+              height:px2rem(58px);
+              line-height:px2rem(58px);
+            }
+            .tip{
+              font-size: px2rem(18px);
+              color:#FF2D4B;
+              height:px2rem(30px);
+              line-height:px2rem(30px);
+              width:px2rem(60px);
+              text-align: center;
+              border:1px solid #FF2B4D;
+              border-radius: px2rem(5px);
+            }
+            .standard{
+              height:px2rem(56px);
+              line-height:px2rem(56px);
+              font-size: px2rem(24px);
+              color:#666666;
+              padding-left:px2rem(6px);
+            }
+            .price{
+              font-size:px2rem(28px);
+              color:#FF2B4D;
+              .delPrice{
+                font-size: px2rem(20px);
+                color:#999999;
+
+              }
+            }
+          }
+        }
+      }
+    }
+}

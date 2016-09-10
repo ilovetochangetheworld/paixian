@@ -1,0 +1,53 @@
+<div class="editAddress-wrap">
+  <div class="common-header">
+      <span class="return" onclick="history.go(-1)" ng-if="vm.return">
+          <i class="iconfont">&#xe606;</i>
+      </span>
+      <span ng-bind="vm.header"></span>
+      <span class="saveAddress">保存</span>
+  </div>
+  <div class="editAddress-item">
+    <div class="left">联系人：</div>
+    <div class="right">
+      <input class="address-input" type="text" name="name" value="易先生">
+    </div>
+  </div>
+  <div class="editAddress-item">
+    <div class="left"></div>
+    <div class="right">
+      <div class="sex">
+        <div>
+          <input type="checkbox" class="weui_check" name="checkbox1" id="s11" checked="checked">
+          <i class="iconfont icon-check">&#xe609;</i>
+          <span>先生</span>
+        </div>
+        <div>
+          <i class="iconfont icon-check">&#xe609;</i>
+          <span>女士</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="editAddress-item">
+    <div class="left">手机号码：</div>
+    <div class="right">
+      <input class="address-input" type="text" name="name" value="13998445757">
+    </div>
+  </div>
+  <div class="editAddress-item">
+    <div class="left">联系人：</div>
+    <div class="right">
+      <input class="address-input" type="text" name="name" value="易先生">
+    </div>
+  </div>
+  <div class="editAddress-item">
+    <div class="left">所在城市：</div>
+    <div class="right">
+      <select class="address-select" name="select2">
+                    <option value="1">中国</option>
+                    <option value="2">美国</option>
+                    <option value="3">英国</option>
+      </select>
+    </div>
+  </div>
+</div>

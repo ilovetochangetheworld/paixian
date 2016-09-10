@@ -1,0 +1,29 @@
+@import "tool.scss";
+.user-wrap{
+  .user-list{
+    height:px2rem(94px);
+    line-height: px2rem(94px);
+    padding:0 px2rem(24px);
+    @include flex(horizontal,justify,center);
+    background-color: #fff;
+    margin-top:px2rem(20px);
+    .left{
+      font-size: px2rem(32px);
+      i{
+        margin-right:px2rem(26px);
+      }
+    }
+    .right{
+      font-size: px2rem(24px);
+    }
+  }
+  .login-out{
+    height:px2rem(84px);
+    line-height:px2rem(84px);
+    color:#FF240D;
+    text-align:center;
+    font-size: px2rem(34px);
+    background-color: #fff;
+    margin-top:px2rem(20px);
+  }
+}

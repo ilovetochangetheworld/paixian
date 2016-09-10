@@ -1,0 +1,11 @@
+@function px2rem($px){
+    $rem : 75px;
+    @return ($px/$rem) + rem;
+}
+//flexbox布局
+@mixin flex($orient,$pack,$align){
+    display:-webkit-box;
+    -webkit-box-orient: $orient;
+    -webkit-box-pack:$pack;
+    -webkit-box-align: $align;
+}

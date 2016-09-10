@@ -1,0 +1,347 @@
+//px计算
+@function px2rem($px) {
+    $rem: 75px;
+    @return ($px/$rem) + rem;
+}
+
+//flexbox布局
+@mixin flex($orient, $pack, $align) {
+    display: -webkit-box;
+    -webkit-box-orient: $orient;
+    -webkit-box-pack: $pack;
+    -webkit-box-align: $align;
+}
+
+//$pink
+// $pink:#FF3968;
+$pink:#FF240D;
+//公共头部高度
+$common-header-height:px2rem(90px);
+//公共底部高度
+$common-footer-height:px2rem(98px);
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 75px;
+    // margin: 0;padding: 0;
+}
+
+body {
+    -webkit-overflow-scrolling: touch;
+    // padding:0;margin:0;
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    width: px2rem(750px);
+    overflow-x: hidden;
+}
+
+html,
+body,
+.wrap {
+    height: 100%;
+    width: 100%;
+}
+
+.common-footer {
+    a:link {
+        color: #757575;
+    }
+    a:visited {
+        color: #757575;
+    }
+    a:focus {
+        color: #757575;
+    }
+    a:hover {
+        color: #757575;
+    }
+    a:active {
+        color: #757575;
+    }
+}
+
+a,
+img {
+    -webkit-touch-callout: none;
+    /* 禁止长按链接与图片弹出菜单 */
+}
+
+a:link {
+    color: #000;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:focus {
+    color: #000;
+}
+
+a:hover {
+    color: #000;
+}
+
+a:active {
+    color: #000;
+}
+
+html,
+body {
+    -webkit-user-select: none;
+    /* 禁止选中文本（如无文本选中需求，此为必选项） */
+    user-select: none;
+}
+
+//清除浮动
+.clearfix:after {
+    content: ".";
+    /**/
+    /*内容为“.”就是一个英文的句号而已。也可以不写。*/
+    display: block;
+    /**/
+    /*加入的这个元素转换为块级元素。*/
+    clear: both;
+    /**/
+    /*清除左右两边浮动。*/
+    visibility: hidden;
+    /**/
+    /*可见度设为隐藏。注意它和display:none;是有区别的。visibility:hidden;仍然占据空间，只是看不到而已；*/
+    line-height: 0;
+    /**/
+    /*行高为0；*/
+    height: 0;
+    /**/
+    /*高度为0；*/
+    font-size: 0;
+    /**/
+    /*字体大小为0；*/
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/**/
+
+
+/*这是针对于IE6的，因为IE6不支持:after伪类，这个神奇的zoom:1让IE6的元素可以清除浮动来包裹内部元素。*/
+
+//字符串截取
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+
+//字体图标
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1473488071_0470226.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1473488071_0470226.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1473488071_0470226.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1473488071_0470226.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1473488071_0470226.svg#iconfont') format('svg'); /* iOS 4.1- */
+}     
+
+.iconfont {
+    font-family: "iconfont";
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+}
+
+//公共头部
+.common-header {
+    height: $common-header-height;
+    line-height: $common-header-height;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 px2rem(-10px) px2rem(5px) #F2F2F2;
+    border-bottom: 1px solid #e3e5e9;
+    font-size: px2rem(34px);
+    text-align: center;
+    background-color: #fff;
+}
+
+.return {
+    font-size: px2rem(36px);
+    position: absolute;
+    left: px2rem(44px);
+    padding-top: 1px;
+    color: #999;
+    //padding-top: 6px;
+    span {
+        display: block;
+    }
+    .gopng_return_outer {
+        margin-top: px2rem(30px);
+    }
+}
+
+.common-search-input {
+    outline: none;
+    width: px2rem(540px);
+    height: px2rem(54px);
+    padding: px2rem(16px) 0 px2rem(16px) px2rem(64px);
+    border: none;
+    border-radius: 14px;
+    color: #666;
+    font-size: px2rem(24px);
+    background: url(/app/resource/img/search.png) no-repeat px2rem(18px) center #e8e8e8;
+    background-size: px2rem(30px);
+    position: relative;
+    top: -4px;
+}
+
+.common-search-btn {
+    font-size: px2rem(28px);
+    position: absolute;
+    right: px2rem(32px);
+    color: #999;
+}
+
+//公共底部
+.common-footer {
+    height: $common-footer-height;
+    position: fixed;
+    bottom: px2rem(0px);
+    width: 100%;
+    z-index: 3;
+    background: #fff;
+    box-shadow: 0 px2rem(-10px) px2rem(10px) rgba(0, 0, 0, 0.05);
+}
+
+.common-footer-wrapper {
+    @include flex(horizontal,
+    center,
+    start);
+    height: 100%;
+    width: 100%;
+}
+
+.common-footer-wrapper-li {
+    display: block;
+    width: 20%;
+    height: px2rem(76px);
+    a {
+        height: px2rem(76px);
+        @include flex(vertical,
+        center,
+        center);
+        * {
+            display: block;
+        }
+        i {
+            font-size: px2rem(49px);
+            position: relative;
+            bottom: px2rem(-7.5px);
+        }
+        p {
+            font-size: px2rem(20px);
+            margin-top: px2rem(8px);
+            //position: relative;
+            //top: px2rem(-10.5px);
+        }
+    }
+}
+
+//底部菜单选择后的颜色
+.footer-selected {
+    color: #FF240D !important;
+}
+
+.footer-selected i {
+    color: #FF240D !important;
+}
+
+//阴影
+.box-shadow {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.10), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.wrap {
+    .weui_cells_checkbox .weui_check:checked + .weui_icon_checked:before {
+        content: '\EA06';
+        color: $pink;
+    }
+}
+
+.address2png {
+    height: px2rem(46px);
+    width: px2rem(40px);
+    float: left;
+    margin-top: px2rem(22px);
+    margin-right: px2rem(6px);
+}
+
+.search-icon {
+    height: px2rem(33px);
+    width: px2rem(33px);
+    float: left;
+}
+
+.menu-search {
+    height: px2rem(40px);
+    width: px2rem(46px);
+}
+
+.bag {
+    height: px2rem(54px);
+    width: px2rem(54px);
+    display: block;
+}
+
+.menu-tab-icon {
+    height: px2rem(40px);
+    width: px2rem(46px);
+    display: block;
+}
+
+.order-icon {
+    height: px2rem(46px);
+    width: px2rem(46px);
+}
+
+.header-return {
+    height: px2rem(30px) !important;
+    width: px2rem(16px) !important;
+}
+
+.icon-del {
+    width: px2rem(38px);
+    height: px2rem(40px);
+}
+
+.icon-right {
+    width: px2rem(16px);
+    height: px2rem(30px);
+}
+
+.icon-logo {
+    width: px2rem(170px);
+    height: px2rem(170px);
+    display: block;
+    margin: auto;
+    margin-top: px2rem(30px);
+    margin-bottom: px2rem(30px);
+}
+
+.icon-add {
+    height: px2rem(46px);
+    width: px2rem(46px);
+}
+
+#loading {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    margin-left: -16px;
+    margin-top: -16px;
+    z-index: 1000;
+}

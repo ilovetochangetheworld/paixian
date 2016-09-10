@@ -1,0 +1,74 @@
+@import "tool.scss";
+.address-wrap{
+  padding-top:px2rem(90px);
+  .address{
+    @include flex(horizontal,justify,center);
+    height:px2rem(94px);
+    line-height:px2rem(94px);
+    font-size: px2rem(28px);
+    color:#666666;
+    padding:0 px2rem(24px);
+    margin-bottom:px2rem(20px);
+    background-color: #fff;
+    i{
+      position: relative;
+      top:px2rem(-6px);
+    }
+  }
+  .address-list{
+    .address-item{
+      height:px2rem(180px);
+      @include flex(horizontal,justify,center);
+      background-color: #fff;
+      color:#666666;
+      padding:0 px2rem(24px);
+      .left{
+        width:px2rem(608px);
+        height:px2rem(112px);
+        @include flex(vertical,justify,start)
+        .top{
+          @include flex(horizontal,start,center)
+          font-size: px2rem(28px);
+          .account{
+            margin-right:px2rem(62px);
+          }
+        }
+        .bottom{
+          font-size: px2rem(24px);
+          color: #999999;
+        }
+      }
+      .right{
+        width:px2rem(142px);
+        height:px2rem(112px);
+        line-height:px2rem(112px);
+        border-left:1px solid #f2f2f2;
+        text-align: center;
+        font-size: px2rem(48px);
+        i{
+          position: relative;
+          top:px2rem(-6px);
+        }
+      }
+    }
+  }
+  .addAddress{
+    position: fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height:px2rem(90px);
+    background-color: #fff;
+    @include flex(horizontal,center,center);
+    .addBtn{
+      width:px2rem(280px);
+      height:px2rem(68px);
+      line-height:px2rem(68px);
+      text-align:center;
+      background-color: #FF2D4B;
+      color: #fff;
+      font-size: px2rem(24px);
+      border-radius:px2rem(5px);
+    }
+  }
+}

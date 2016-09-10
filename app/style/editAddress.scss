@@ -1,0 +1,61 @@
+@import "tool.scss";
+.saveAddress{
+  width:px2rem(70px);
+  height:px2rem(90px);
+  line-height:px2rem(90px);
+  position: absolute;
+  right: px2rem(44px);
+  text-align: right;
+  font-size: px2rem(32px);
+  color: #333333;
+}
+.editAddress-wrap{
+  padding-top:px2rem(90px);
+  font-size: px2rem(32px);
+  .editAddress-item{
+    @include flex(horizontal,start,center);
+    height:px2rem(100px);
+    padding:0 px2rem(24px);
+    color: #424242;
+    background-color: #fff;
+    margin-bottom: 1px;
+    .left{
+      width:px2rem(160px);
+    }
+    .right{
+      font-size: px2rem(30px);
+      width: px2rem(400px);
+      .address-input{
+        width:100%;
+        border: 0;
+        outline: 0;
+        -webkit-appearance: none;
+        background-color: transparent;
+        font-size: inherit;
+        color: inherit;
+        height: px2rem(48px);
+        line-height: px2rem(48px);
+      }
+      .icon-check{
+        font-size: px2rem(38px);
+        color: #c9c9c9;
+      }
+      .weui_check{
+        position: absolute;
+        left: -9999em;
+      }
+      .weui_check:checked+.icon-check{
+          color: red !important;
+          font-size: px2rem(38px);
+      }
+      .sex{
+        @include flex(horizontal,start,center);
+      }
+      .sex div:first-child{
+        margin-right:px2rem(78px);
+      }
+    }
+
+  }
+
+}
