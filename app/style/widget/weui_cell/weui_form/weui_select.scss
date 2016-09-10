@@ -1,0 +1,39 @@
+﻿@import "../../../base/fn";
+
+.#{$weui_ns}cell_select {
+    padding: 0;
+    .#{$weui_ns}select {
+        padding-right: px2rem(60px);
+    }
+    .#{$weui_ns}access_icon {
+        // position: absolute;
+        // top: 50%;
+        // right: $weuiCellGapH;
+        // margin-top: -12px;
+    }
+    .#{$weui_ns}cell_bd{
+        &:after{
+            content: " ";
+            @include setArrow_Wap(right, px2rem(12px), #C8C8CD, px2rem(4px));
+
+            position: absolute;
+            top: 50%;
+            right: $weuiCellGapH;
+            margin-top: px2rem(-6px);
+        }
+    }
+}
+
+.#{$weui_ns}select {
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    width: 100%;
+    font-size: inherit;
+    height: px2rem(86px);
+    line-height: $weuiCellHeight;
+    position: relative;
+    z-index: 1;
+    padding-left: $weuiCellGapH;
+}

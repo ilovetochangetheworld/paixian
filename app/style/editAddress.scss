@@ -36,6 +36,17 @@
         height: px2rem(48px);
         line-height: px2rem(48px);
       }
+      .address-select{
+        width:100%;
+        border: 0;
+        outline: 0;
+        -webkit-appearance: none;
+        background-color: transparent;
+        font-size: inherit;
+        color: inherit;
+        height: px2rem(48px);
+        line-height: px2rem(48px);
+      }
       .icon-check{
         font-size: px2rem(38px);
         color: #c9c9c9;
@@ -55,7 +66,14 @@
         margin-right:px2rem(78px);
       }
     }
-
   }
-
+  .editAddress-del{
+    height:px2rem(100px);
+    line-height:px2rem(100px);
+    margin-top: px2rem(20px);
+    background-color: #fff;
+    font-size: px2rem(32px);
+    color: #FF2D4B;
+    text-align: center;
+  }
 }

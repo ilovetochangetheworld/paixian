@@ -38,6 +38,12 @@
                 templateUrl: "views/user/editAddress.html",
                 controller: "editAddressController as vm"
             })
+            //购物车
+            .state('cart', {
+                url: "/cart", 
+                templateUrl: "views/cart/cart.html",
+                controller: "cartController as vm"
+            })
 
     }
 })();

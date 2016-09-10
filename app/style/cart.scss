@@ -1,0 +1,92 @@
+@import "tool.scss";
+.cart-wrap{
+  padding-top:px2rem(90px);
+  // 收货时间
+  .common-list{
+    .cart-time{
+      font-size: px2rem(28px);
+      color: #FF2D4B;
+    }
+    .right{
+      color: #666666;
+    }
+    .note{
+      width:px2rem(450px);
+
+    }
+  }
+  .goods-list{
+    height:px2rem(140px);
+    @include flex(horizontal,justify,center);
+    background-color: #fff;
+    padding:0 px2rem(26px);
+    .icon-check{
+      display:block;
+      font-size: px2rem(38px);
+      color: #c9c9c9;
+    }
+    .goods-list-check{
+      position: absolute;
+      left: -9999em;
+    }
+    .goods-list-check:checked+.icon-check{
+        color: red !important;
+        font-size: px2rem(38px);
+    }
+    .goodsImg{
+      width:px2rem(190px);
+      margin-left:px2rem(35px);
+      img{
+        width:px2rem(190px);
+        height:px2rem(140px);
+      }
+    }
+    .goodsInform{
+      width:px2rem(135);
+      font-size: px2rem(28px);
+      color:#333;
+      margin-left:px2rem(30px);
+      height:px2rem(140px);
+      @include flex(vertical,justify,start)
+      padding:px2rem(24px) 0;
+    }
+    .goodsAdd{
+      width:px2rem(160px);
+      margin-left:px2rem(20px);
+      @include flex(horizontal,justify,center);
+      font-size: px2rem(28px);
+      i{
+        font-size:px2rem(50px);
+        color:#FF2D4B;
+      }
+    }
+  }
+  .cartPrice {
+      height: px2rem(99px);
+      line-height: px2rem(99px);
+      background-color: #fff;
+      position: fixed;
+      bottom: px2rem(97px);
+      font-size: px2rem(28px);
+      width:100%;
+      border-top: 1px solid #E4E3E3;
+      z-index: 3;
+      @include flex(horizontal,justify,center);
+      .left{
+        @include flex(horizontal,justify,center);
+        width:px2rem(350px);
+        padding-left:px2rem(85px);
+        .price{
+          color: #FF2D4B;
+        }
+      }
+      .right{
+        width:px2rem(150px);
+        line-height:px2rem(100px);
+        text-align: center;
+        background-color: #FF2D4B;
+        font-size: px2rem(26px);
+        color:#fff;
+      }
+  }
+}

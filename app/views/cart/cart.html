@@ -1,0 +1,67 @@
+<div class="cart-wrap">
+  <header></header>
+  <div class="common-list" ui-sref="address">
+    <div class="left">
+      <span>请选择收货地址</span>
+    </div>
+    <div class="right">
+      <i class="iconfont">&#xe605;</i>
+    </div>
+  </div>
+  <div class="common-list">
+    <div class="left">
+      <span>收货时间</span>
+      <span class="cart-time">及时送达</span>
+    </div>
+    <div class="right">
+      <span>修改</span>
+      <i class="iconfont">&#xe605;</i>
+    </div>
+  </div>
+  <div class="common-list">
+    <div class="left">
+      <span>备注信息</span>
+      <input class="note" type="text" name="name" value="" placeholder="请输入您的要求，100字以内">
+    </div>
+  </div>
+  <div class="goods-list">
+    <div class="choose">
+      <input type="checkbox" class="goods-list-check" name="checkbox1" id="s11" checked="checked">
+      <i class="iconfont icon-check">&#xe609;</i>
+    </div>
+    <div class="goodsImg">
+      <img src="resource/img/goods.png" alt="" />
+    </div>
+    <div class="goodsInform">
+      <div class="">
+        测试商品，勿拍
+      </div>
+      <div ng-bind="9.9 | number: 2 | currency: '¥'"></div>
+    </div>
+    <div class="goodsAdd">
+      <div class="">
+        <i class="iconfont">&#xe60a;</i>
+      </div>
+      <div class="">
+        11
+      </div>
+      <div class="">
+        <i class="iconfont">&#xe60b;</i>
+      </div>
+    </div>
+  </div>
+  <div class="cartPrice" >
+    <div class="left">
+      <div class="">
+        全选
+      </div>
+      <div class="">
+        共: <span class="price" ng-bind="9.9 | number: 2 | currency: '¥'"></span>
+      </div>
+    </div>
+    <div class="right">
+      选好了
+    </div>
+  </div>
+  <footer></footer>
+</div>

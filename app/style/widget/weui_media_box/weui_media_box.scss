@@ -1,0 +1,93 @@
+@import "../../base/fn";
+
+$lineColor: #E5E5E5;
+$grayColor: #999999;
+
+.#{$weui_ns}media_box {
+    padding: px2rem(30px);
+    position: relative;
+    &:before {
+        @include setTopLine($lineColor);
+        left: px2rem(30px);
+    }
+    &:first-child {
+        &:before {
+            display: none
+        }
+    }
+    .#{$weui_ns}media_title {
+        font-weight: 400;
+        font-size: px2rem(34px);
+        @include ellipsis();
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    .#{$weui_ns}media_desc {
+        color: $grayColor;
+        font-size: px2rem(23px);
+        line-height: 1.2;
+        @include ellipsisLn(2);
+    }
+
+    &.#{$weui_ns}media_text {
+        .#{$weui_ns}media_title {
+            margin-bottom: px2rem(16px);
+        }
+        .#{$weui_ns}media_info {
+            margin-top: px2rem(30px);
+            padding-bottom: px2rem(10px);
+            font-size: px2rem(26px);
+            color: #CECECE;
+            line-height: 1em;
+            list-style: none;
+            overflow: hidden;
+        }
+        .#{$weui_ns}media_info_meta {
+            float: left;
+            padding-right: 1em;
+            &.#{$weui_ns}media_info_meta_extra {
+                padding-left: 1em;
+                border-left: 1px solid #CECECE;
+            }
+        }
+    }
+    &.#{$weui_ns}media_appmsg {
+        display: flex;
+        align-items: center;
+        .#{$weui_ns}media_hd {
+            margin-right: .8em;
+            width: px2rem(120px);
+            height: px2rem(120px);
+            line-height: px2rem(120px);
+            text-align: center;
+        }
+        .#{$weui_ns}media_appmsg_thumb {
+            width: 100%;
+            max-height: 100%;
+            vertical-align: middle;
+        }
+        .#{$weui_ns}media_bd {
+            flex: 1;
+            min-width: 0;
+        }
+    }
+    &.#{$weui_ns}media_small_appmsg {
+        padding: 0;
+        .#{$weui_ns}cells {
+            margin-top: 0;
+            &:before {
+                display: none;
+            }
+        }
+        .#{$weui_ns}cells_access {
+        }
+    }
+}
+
+a.#{$weui_ns}media_box {
+    color:#000000;
+    @include setTapColor();
+    &:active {
+        background-color: #ECECEC;
+    }
+}

@@ -1,0 +1,15 @@
+@import "../../tool.scss";
+$weuiCellBg:#FFFFFF;
+$weuiCellBorderColor:#D9D9D9;
+$weuiCellGapV:px2rem(20px);
+$weuiCellGapH:px2rem(30px);
+$weuiCellInnerGapH:.35em;
+$weuiCellLabelWidth:px2rem(210px);
+
+
+$weuiCellHeight: px2rem(88px);
+$weuiCellFontSize:px2rem(34px);
+$weuiCellTipsFontSize:px2rem(28px);
+
+$weuiCellLineHeight: px2rem(68px); // 高度为44px，减去上下padding的行高
+$weuiCellsMarginTop: px2rem(20px);

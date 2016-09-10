@@ -1,0 +1,25 @@
+@function px2rem($px){
+    $rem : 75px;
+    @return ($px/$rem) + rem;
+}
+$weuiBtnDefaultGap:px2rem(30px);
+$weuiBtnHeight:px2rem(84px);
+$weuiBtnMiniHeight:1.9;
+$weuiBtnFontSize:px2rem(36px);
+$weuiBtnFontColor:#FFFFFF;
+$weuiBtnDisabledFontColor:rgba(255,255,255,.6);
+$weuiBtnActiveFontColor:rgba(255,255,255,.4);
+$weuiBtnMiniFontSize:px2rem(28px);
+$weuiBtnBorderRadius:8px;
+
+$weuiBtnDefaultBg:#F7F7F7;
+$weuiBtnDefaultActiveBg:#DEDEDE;
+$weuiBtnDefaultFontColor:#454545;
+$weuiBtnDefaultDisabledFontColor:#C9C9C9;
+$weuiBtnDefaultActiveFontColor:#A1A1A1;
+
+$weuiBtnPrimaryBg:#04be02;
+$weuiBtnPrimaryActiveBg:#039702;
+
+$weuiBtnWarnBg:#ef4f4f;
+$weuiBtnWarnActiveBg:#c13e3e;

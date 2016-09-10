@@ -1,0 +1,64 @@
+@import "../../base/fn";
+
+$lineColor: #E5E5E5;
+$grayColor: #999999;
+
+.#{$weui_ns}panel {
+    background-color: #FFFFFF;
+    margin-top: px2rem(20px);
+    &:first-child {
+        margin-top: 0;
+    }
+
+    position: relative;
+    overflow: hidden;
+    &:before {
+        @include setTopLine($lineColor);
+    }
+    &:after {
+        @include setBottomLine($lineColor);
+    }
+}
+
+.#{$weui_ns}panel_hd {
+    padding: px2rem(28px) px2rem(30px) px2rem(20px);
+    color: $grayColor;
+    font-size: px2rem(26px);
+    position: relative;
+    &:after {
+        @include setBottomLine($lineColor);
+        left: px2rem(30px);
+    }
+}
+
+.#{$weui_ns}panel_ft {
+    padding:px2rem(20px) px2rem(30px) px2rem(24px);
+    color: $grayColor;
+    font-size: px2rem(28px);
+    position: relative;
+    &:before {
+        @include setTopLine($lineColor);
+        left: px2rem(30px);
+    }
+    .#{$weui_ns}panel_access & {
+        display: block;
+        color: #586C94;
+        @include setTapColor();
+        &:active {
+            background-color:#ECECEC;
+        }
+        &:after {
+            content: " ";
+            @include setArrow_Wap(right, px2rem(12px), #C7C7CC, px2rem(4px));
+            position: absolute;
+            right: px2rem(30px);
+            top: 50%;
+            margin-top: px2rem(-8px);
+        }
+    }
+}
+
+
+
+
+
