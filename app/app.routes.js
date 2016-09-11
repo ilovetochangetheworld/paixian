@@ -40,9 +40,15 @@
             })
             //购物车
             .state('cart', {
-                url: "/cart", 
+                url: "/cart",
                 templateUrl: "views/cart/cart.html",
                 controller: "cartController as vm"
+            })
+            //购物车
+            .state('order', {
+                url: "/order",
+                templateUrl: "views/order/order.html",
+                controller: "OrderController as vm"
             })
 
     }
